@@ -1,0 +1,9 @@
+body{
+    background-color: whitesmoke;
+}
+.TEST{
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    background: rgba(152, 206, 212, 0.35)
+} 
