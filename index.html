@@ -4,23 +4,25 @@
     <link rel="icon" href="./img/logo/icon.png">
 <head>
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./js/Clock.js">
 
 </head>
 <body>
-
-    <div class="header" style="
+    <script>
+        var backgroundRandom = parseInt(Math.random()*8+1);
+        document.write('<img class="background" src="./img/background/'+backgroundRandom+'.jpg" style="background-image: url();">');
+    </script>
+    <!-- <div class="header" style="
     padding: 0;
     position: fixed;
     width: 100%;
     background: rgba(152, 206, 212, 0.35);">
         
         <li id="TEST">hj</li>
+    </div> -->
+    <div class="main">
+        <h1>我退出</h1>
     </div>
-    <script>
-        var backgroundRandom = parseInt(Math.random()*8+1);
-        document.write('<img class="background" src="./img/background/'+backgroundRandom+'.jpg" style="background-image: url();">');
-    </script>
-    <a id="Clock"></a>
+
+    
 </body>
 </html>

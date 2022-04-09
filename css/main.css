@@ -1,9 +1,32 @@
 body{
-    background-color: whitesmoke;
+    background-color: rgb(255, 255, 255);
 }
-.TEST{
+.background{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    opacity: 0.25;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+/* .TEST{
     padding: 0;
     position: fixed;
     width: 100%;
     background: rgba(152, 206, 212, 0.35)
-} 
+}  */
+.backcolur{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    color: rgba(245, 245, 245, 0.25);
+}
+.main{
+    font-family: 我想做你男朋友;
+    src: url("./font/npy.ttf");
+    text-align: center;
+    display: inline-block;
+}
