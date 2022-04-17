@@ -1,3 +1,0 @@
-function about(){
-    alert("A");
-}
