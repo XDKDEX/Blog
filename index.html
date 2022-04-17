@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <title>Blog</title>
+    <link rel="icon" href="./img/logo/icon.png">
+<head>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./js/Clock.js">
+    <link rel="stylesheet" href="./js/about.js">
+</head>
+<body>
+    <script>
+        var backgroundRandom = parseInt(Math.random()*8+1)
+        document.write('<div class="background" style="background-image:url(./img/background/'+backgroundRandom+'.jpg);"></div>');
+    </script>
+    <div class="header">
+        <ul class="hader-HUD">
+            <!-- <li id="homepage">首页</li> -->
+            <button id="about" onclick="about()">关于</button>
+            <script>
+                function about(){
+                    alert("你知道的我开发周期比较长\n所以我们需要开发人员(非必要)\n三个月内预计会开发完(咕咕咕\n");
+                }
+            </script>
+        </ul>
+    </div>
+    <div class="A">
+        <h1>总有一天,</h1>
+        <h1>我要画出充满心意的画作</h1>
+        <h1>拥有强大的技术的团队</h1>
+        <h1>嗯</h1>
+        <h1>还有很多...</h1>
+        <a style="color: cyan;">喜欢</a>
+        <a>愢</a>
+    </div>
+    
+    <a id="Clock"></a>
+</body>
+</html>
