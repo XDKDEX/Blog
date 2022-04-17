@@ -1,6 +1,6 @@
 var now = new Date();
 function createtime(){
-    var grt = new Date(xb.ctime);
+    var grt = new Date();
     now.setTime(now.getTime()+250);
     days = (now-grt)/1000/60/60/24;dnum = Math.floor(days);
     hours = (now-grt)/1000/60/60-(24*dnum);hnum = Math.floor(hours);
@@ -9,5 +9,5 @@ function createtime(){
     if(String(mnum).length==1){mnum = '0'+mnum;}
     seconds = (now-grt)/1000-(24*60*60*dnum)-(60*60*hnum)-(60*mnum);snum = Math.round(seconds);
     if(String(snum).length==1){snum = '0'+snum;}
-    document.getElementById('span_dt_dt').innerHTML = dnum+'天'+hnum+'小时'+mnum+'分'+snum+'秒';
+    document.getElementById('Clock').innerHTML = dnum+'天'+hnum+'小时'+mnum+'分'+snum+'秒';
 }

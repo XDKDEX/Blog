@@ -1,0 +1,3 @@
+function about(){
+    alert("A");
+}
