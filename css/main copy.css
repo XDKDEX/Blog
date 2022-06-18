@@ -12,21 +12,10 @@ a{
 h2{
     color: #333;
     text-decoration: none;
-    margin: 2px 0 6px 10px;
-}
-
-p{
-    margin: 10px 8px 6px 15px;
-    font-size: smaller;
 }
 ul{
     list-style: none;
-}
-i{
-    font-size: initial;
-}
-
-
+    }
 .background{
     background-image:url("../img/background/day.jpg");
     position: fixed;
@@ -106,51 +95,36 @@ i{
     width: 100%;
 }
 .container{
-}
-.container-main{
-    margin-top: 4mm;
-    margin-right: 4mm;
-    margin-bottom: 4mm;
-    margin-left: 4mm;
-    background-color:#ffffff;
     animation-name: ContainerAnimation;
     animation-timing-function: ease;
-    animation-duration: 2.5s;
+    animation-duration: 3s;
+}
+.container-main{
+    margin: 4mm;
+    background-color:#eaf4fc;
+    border-radius: 5px;
+    animation-name: ContainerAnimation;
+    animation-timing-function: ease;
+    animation-duration: 3s;
 }
 .container-main-article{
-    border: solid 1px #f3f3f3;
-    
-    transition: box-shadow .5s;
-}.container-main-article:hover{
-    box-shadow: 4px 6px 10px 0px rgba(0,0,0,0.5);
+    margin-top: 0.2em;
+    animation-name: ContainerAnimation;
+    animation-timing-function: ease;
+    animation-duration: 3s;
 }
-
 .container-main-article-row{
-}
-.container-main-article-row-img{
-    height: auto;
-    max-width: 80%;
-    width: 750px;
+    padding: 1em;
+    animation-name: ContainerAnimation;
+    animation-timing-function: ease;
+    animation-duration: 3s;
 }
 .container-main-article-row-detailed{
-    border-top: solid 1px #f3f3f3;
-    padding: 1em;
+    font-size: 14px;
     text-align:start;
-    color: #333;
-    font-size: initial;
-}
-.container-main-article-row-detailed-time{
-    padding: 1em;
-    padding-left: 0;
-    color: #333;
-    
-}
-.container-main-article-row-detailed-reads{
-    padding: 1mm;
     color: #333;
 }
 .container-main-article-row-detailed-live{
-    padding: 1em;
     color: #333;
 }
 
@@ -166,7 +140,7 @@ i{
 
 @keyframes ContainerAnimation{
     0% {opacity: 0;margin-top: 10em;}
-    100% {opacity: 1;margin-top: 4mm;}
+    100% {opacity: 1;margin-top: 0.2em;}
 }
 
 
@@ -189,9 +163,6 @@ i{
 .footer-about{
     background-color: rgb(35, 40, 40,.35);
     text-align: center;
-}
-.footer-about footer{
-    padding:40px 0 30px;
 }
 .footer-about-container{
     color: rgba(255, 255, 255, .8);

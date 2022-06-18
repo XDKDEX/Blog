@@ -1,13 +1,21 @@
-var now = new Date();
-function createtime(){
-    var grt = new Date();
-    now.setTime(now.getTime()+250);
-    days = (now-grt)/1000/60/60/24;dnum = Math.floor(days);
-    hours = (now-grt)/1000/60/60-(24*dnum);hnum = Math.floor(hours);
-    if(String(hnum).length==1){hnum = '0'+hnum;}
-    minutes = (now-grt)/1000/60-(24*60*dnum)-(60*hnum);mnum = Math.floor(minutes);
-    if(String(mnum).length==1){mnum = '0'+mnum;}
-    seconds = (now-grt)/1000-(24*60*60*dnum)-(60*60*hnum)-(60*mnum);snum = Math.round(seconds);
-    if(String(snum).length==1){snum = '0'+snum;}
-    document.getElementById('Clock').innerHTML = dnum+'天'+hnum+'小时'+mnum+'分'+snum+'秒';
+setInterval("Clock()",1000);
+var t = new Date().getTime();
+t= parseInt((t-1654945734530)/1000);
+var seconds = t;
+var minutes = seconds/60;
+var hours = minutes/60;
+var day = hours/24;
+function Clock(){
+    if(seconds>59){
+        minutes = minutes+seconds/60;
+        seconds = seconds%60;
+    }seconds++;
+    if(minutes>60){
+        hours = hours+minutes/60;
+        minutes = minutes%60;
+    }if(hours>24){
+        day = day+hours/24;
+        hours = hours%24;
+    }
+    document.getElementById("Clock").innerHTML=+parseInt(day)+'天'+parseInt(hours)+'小时'+parseInt(minutes)+'分'+parseInt(seconds)+'秒';
 }

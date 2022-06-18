@@ -1,0 +1,53 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function UserAgent(){
+var Agent = navigator.userAgent;
+var ResultWindows = Agent.indexOf("Windows");
+var ResultAndroid = Agent.indexOf("Android");
+var ResultiOS = Agent.indexOf("ISO");
+if (ResultWindows!=-1){//PC
+    document.write("Winodws");
+}if (ResultAndroid!=-1){
+    document.write("Android");
+}if (ResultiOS!=-1){
+    document.write("IOS");
+}
+function theme(){
+    var theme = window.matchMedia("(background-color:#303030)");
+    //A
+    if (window.matchMedia("(background-color:#303030)")){
+        document.getElementById("body").style.backgroundColor = "#303030";
+    }
+}
+
+
+}

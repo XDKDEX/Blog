@@ -1,0 +1,110 @@
+)body{
+    background-color:whitesmoke;
+    src:url(https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/fonts/fontawesome-webfont.ttf);
+    font-family: "FontAwesome";
+    margin: 0;
+}
+::-webkit-scrollbar {
+    width: 100px;
+    background-color: #f5f5f511;
+}
+::-webkit-scrollbar-thumb {
+    background-color:rgba(120, 120, 120, 0.4);
+}
+/* a{
+    padding: 7px 18px;
+    display: block;
+    font-weight: 400;
+} */
+.header{
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.header-menu{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.header-menu-ul{
+    display: flex;
+    list-style: none;
+    margin: 10px;
+    font-height: 400px;
+}
+
+.container{
+    background-color: #f0f0f0;
+    padding: 20px 0;
+}
+
+.container-main{
+    display: block;
+    margin: 0 1.2em;
+}
+
+.container-main-article{
+    box-shadow: 10px 10px 25px -15px rgba(0,0,0,0.75);
+}
+
+.container-main-article-row{
+    padding-left: 1em;
+}
+
+.container-main-article-row-type{
+    position: relative;
+    font-size: 75%;
+    background-color: #bddd22;
+    top: -3px;
+}
+
+
+
+
+
+.footer-about{
+    background-color: rgb(35, 40, 40);
+    text-align: center;
+}
+.footer-about-container{
+    color: rgb(140, 140, 140, .8);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.aplayer{
+    z-index: 200;
+    opacity: .65;
+    transition: opacity 2.5s;
+}.aplayer:hover{
+    opacity: .85;
+}
