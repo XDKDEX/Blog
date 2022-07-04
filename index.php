@@ -83,21 +83,18 @@
                 echo $pageURL;
 
 
-
-
-
-
-
                 $n = 1;
-                while(file_exists('./container/'.$n.'.xml')){
+                while(file_exists('./container/'.$n.'.json')){
                     $n++;
                 }
                 $n--;
                 while(true){
-                    if(file_exists('./container/'.$n.'.xml')){
+                    if(file_exists('./container/'.$n.'.json')){
 
-                   
-                    $xml = simplexml_load_file('./container/'.$n.'.xml');
+                    $json_source = file_get_contents('./container/'.$n.'.json');
+                    $json = json_decode($json_source, true);
+
+
                     echo "<section class='container-main' id='container-main'>
                             <article class='container-main-article'>
                                 <div class='container-main-article-row'>
@@ -105,14 +102,14 @@
                                         <img class='container-main-article-row-img' src='./img/Blog.jpg'>
                                     </a>
                                     <a onclick=RI(".$n.") href='/container/index.php'>
-                                        <h2>".$xml->title."</h2>
+                                        <h2>".$json['title']."</h2>
                                     </a>
-                                        <p>".$xml->container."...</p>
+                                        <p>".mb_substr($json['Container'],0,120)."...</p>
                                     <div class='container-main-article-row-detailed'>
                                         <a class='container-main-article-row-detailed-time' id='time'><i class='fa fa-calendar'></i>1145-14-19</a>
-                                        <a class='container-main-article-row-detailed-reads'><i class='fa fa-eye'></i>".$xml->reads."次阅读</a>
+                                        <a class='container-main-article-row-detailed-reads'><i class='fa fa-eye'></i>".$json['reads']."次阅读</a>
                                         <a></a>
-                                        <a class='container-main-article-row-detailed-live'><i class='fa fa-thumbs-o-up'></i>".$xml->reads."人点赞</a>
+                                        <a class='container-main-article-row-detailed-live'><i class='fa fa-thumbs-o-up'></i>".$json['live']."人点赞</a>
                                         <!-- <a class='container-main-article-row-detailed-live-act' href='javascript:void(1);' onclick='live()'><i class='fa fa-thumbs-o-up' id='live'></i></a> --!>
                                     </div>
                                 </div>
