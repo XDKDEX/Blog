@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <html lang="zh-cn">
 <head>
 <!-- name:DefintElis -->
     <title>主页</title>
+    <link rel="stylesheet" href="./css/basic.css">
     <!-- <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css"> -->
     <meta charset="UTF-8">
     <link rel="icon" href="./img/logo/icon.png">
@@ -18,7 +19,7 @@
         <script src="./Plug-in/APlayer/APlayer.min.js"></script>
             <!-- APlayer-MetingJS -->
                 <script src="./Plug-in/Meting/Meting.min.js"></script>
-                <meting-js server="netease" type="playlist" id="7366701902" fixed="true" order="random" autoplayer="true" lrctype="1"></meting-js>
+                <meting-js  server="netease" type="playlist" id="7366701902" fixed="true" order="random" autoplayer="true" lrctype="1"></meting-js>
             <!-- APlayer-MetingJS -->
         <!--Aplayer-End-->
         
@@ -52,33 +53,61 @@
                     </li>
                 </a>
             </ul>
-            
         </div>
+
     </div>
+
+    <div class='sidebar' id='sidebar' style="width: 0%;"></div>
+    <div class='sidebar-mask' id='sidebar-mask' onclick='mask()' style="display: none;"></div>
+
+
+
+
+
+
+
+
     <div class='placeholder'></div>
 
 
 
 
 
-        <div class='container'>
+        <div class='container'  onclick="A()">
+
             <?php
+                 
+
+
+                $pageURL = $_SERVER["REQUEST_URI"];
+                echo $pageURL;
+
+
+
+
+
+
+
                 $n = 1;
                 while(file_exists('./container/'.$n.'.xml')){
                     $n++;
                 }
                 $n--;
-                while(file_exists('./container/'.$n.'.xml')){
+                while(true){
+                    if(file_exists('./container/'.$n.'.xml')){
+
+                   
                     $xml = simplexml_load_file('./container/'.$n.'.xml');
                     echo "<section class='container-main' id='container-main'>
-                            
                             <article class='container-main-article'>
                                 <div class='container-main-article-row'>
-                                    <img class='container-main-article-row-img' src='./img/Blog.jpg'>
-                                    <a href=".$xml->link.">
+                                    <a onclick=RI(".$n.") href='/container/index.php'>
+                                        <img class='container-main-article-row-img' src='./img/Blog.jpg'>
+                                    </a>
+                                    <a onclick=RI(".$n.") href='/container/index.php'>
                                         <h2>".$xml->title."</h2>
                                     </a>
-                                        <p>".$xml->container."</p>
+                                        <p>".$xml->container."...</p>
                                     <div class='container-main-article-row-detailed'>
                                         <a class='container-main-article-row-detailed-time' id='time'><i class='fa fa-calendar'></i>1145-14-19</a>
                                         <a class='container-main-article-row-detailed-reads'><i class='fa fa-eye'></i>".$xml->reads."次阅读</a>
@@ -88,17 +117,21 @@
                                     </div>
                                 </div>
                             </article>
-                            
-                          </section>  
+                            </section>
                         ";
                     $n--;
+                    }else{
+                        break;
+                    }
+
                 }
             ?>
+
         </div>
     <div class='footer-about' id='footer-about'>
         <footer>
             <div class='footer-about-container'>
-                <span>Copyright  2021 'TEMP'. All rights reserved. | 已在风雨中度过 </span>    <a id='Clock' class='Clock'></a>
+                <span>Copyright  2021 'TEMP'. All rights reserved. |  </span>    <span id='Clock' class='Clock'></span>
                 <br><span>MADE BY ME </span>
             </div>
         </footer>

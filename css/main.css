@@ -1,106 +1,6 @@
-body{
-    background-color:whitesmoke;
-    src:url(https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/fonts/fontawesome-webfont.ttf);
-    font-family: "FontAwesome";
-    margin: 0;
-    text-decoration: none;
+h3{
+    text-shadow: 2px 2px 5px #f3f3f3;
 }
-a{
-    text-decoration: none;
-    
-}
-h2{
-    color: #333;
-    text-decoration: none;
-    margin: 2px 0 6px 10px;
-}
-
-p{
-    margin: 10px 8px 6px 15px;
-    font-size: smaller;
-}
-ul{
-    list-style: none;
-}
-i{
-    font-size: initial;
-}
-
-
-.background{
-    background-image:url("../img/background/day.jpg");
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    z-index: -100;
-}
-::-webkit-scrollbar {
-    width: 1px;
-    background-color: #f5f5f511;
-    transition: width 2s;
-
-}
-::-webkit-scrollbar:hover{
-    width: 10px;
-}
-::-webkit-scrollbar{
-    color: rgba(0, 0, 0, 0);
-}
-    
-
-::-webkit-scrollbar-thumb {
-    background-color:rgba(120, 120, 120, 0.4);
-}
-/* a{
-    padding: 7px 18px;
-    display: block;
-    font-weight: 400;
-} */
-.header{
-    position: fixed;
-    width: 100%;
-    background-color: rgba(95, 95, 93, 0.2);
-    backdrop-filter: blur(2px);
-    z-index: 100;
-}
-.header-menu{
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-.header-menu-list{
-    color: white;
-    display: flex;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: -1em;
-    font-size: xx-large;
-}
-
-.header-menu-home{
-    color: white;
-    display: flex;
-    margin: auto;
-    font-size: xx-large;
-    justify-content: space-between;
-}
-
-.header-menu-search{
-    color: white;
-    display: flex;
-    margin-top: auto;
-    margin-bottom: auto;
-    font-size: xx-large;
-}
-
-.header-menu li{
-    color: white;
-}
-
-
-
-
 .placeholder{
     height: 4em;
     width: 100%;
@@ -129,8 +29,8 @@ i{
 }
 .container-main-article-row-img{
     height: auto;
-    max-width: 80%;
-    width: 750px;
+    max-width: 100%;
+    width: 100%;
 }
 .container-main-article-row-detailed{
     border-top: solid 1px #f3f3f3;
@@ -171,66 +71,7 @@ i{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.footer-about{
-    background-color: rgb(35, 40, 40,.35);
+.no{
+    color: white;
     text-align: center;
-}
-.footer-about footer{
-    padding:40px 0 30px;
-}
-.footer-about-container{
-    color: rgba(255, 255, 255, .8);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.aplayer{
-    z-index: 20;
-    opacity: .65;
-    transition: opacity 2.5s;
-}.aplayer:hover{
-    opacity: .8;
 }

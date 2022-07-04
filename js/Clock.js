@@ -1,21 +1,17 @@
-setInterval("Clock()",1000);
+﻿setInterval("Clock()",1000);
 var t = new Date().getTime();
-t= parseInt((t-1654945734530)/1000);
+t= parseInt((t-1656578606053)/1000);
 var seconds = t;
-var minutes = seconds/60;
-var hours = minutes/60;
-var day = hours/24;
-function Clock(){
-    if(seconds>59){
-        minutes = minutes+seconds/60;
-        seconds = seconds%60;
-    }seconds++;
-    if(minutes>60){
-        hours = hours+minutes/60;
-        minutes = minutes%60;
-    }if(hours>24){
-        day = day+hours/24;
-        hours = hours%24;
-    }
-    document.getElementById("Clock").innerHTML=+parseInt(day)+'天'+parseInt(hours)+'小时'+parseInt(minutes)+'分'+parseInt(seconds)+'秒';
+function Clock(){ 
+    if(seconds/60===1){
+        console.log(seconds);
+    }minutes= parseInt(seconds/60);
+    if(parseInt(minutes/60)===1){
+        minutes = seconds%60;
+    }hours= parseInt(minutes/60);
+    if(parseInt(hours/24)===1){
+        day = hours%24;
+    }day= parseInt(hours/24);
+    document.getElementById("Clock").innerHTML='已在服务器上运行'+day+'天'+hours%24+'小时'+minutes%60+'分'+seconds%60+'秒';
+    seconds++;
 }
