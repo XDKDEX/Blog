@@ -1,8 +1,8 @@
 body{
     background-color:whitesmoke;
     cursor: url(../img/cursor/cursor.cur),default;
-    src:url(https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/fonts/fontawesome-webfont.ttf);
-    font-family: "FontAwesome";
+    src:url(../fonts/Deng.ttf);
+    font-family: "等线";
     margin: 0;
     text-decoration: none;
 }
@@ -18,8 +18,9 @@ h2{
 /* color:#120f21 */
 p{
     margin: 10px;
-    font-size: 16px;
+    font-size:large;
     word-wrap:break-word;
+
 }
 ul{
     list-style: none;
@@ -36,10 +37,18 @@ i{
     z-index: 100;
     animation-duration: .6s;
     z-index: 100;
-}@keyframes sidebar{
+}
+@keyframes PEsidebar{
+    0%{width: 0%;}
+    100%{width: 30%;}
+}@keyframes PEsidebarClose{
+    0%{width: 30%;}
+    100%{width: 0%;}
+}
+@keyframes PCsidebar{
     0%{width: 0%;}
     100%{width: 25em;}
-}@keyframes sidebarClose{
+}@keyframes PCsidebarClose{
     0%{width: 25em;}
     100%{width: 0%;}
 }
@@ -139,6 +148,54 @@ i{
 .header-menu li{
     color: white;
 }
+
+
+
+
+
+
+
+.code{
+    margin: 1em;
+    padding: 1em;
+    background-color:#0e111a;
+}
+code{
+    color: #a3a9b3;
+    src: url(../fonts/consola.ttf);
+    font-family: "consolas";
+    font-size: small;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .footer-about{
     background-color: rgb(35, 40, 40,.35);

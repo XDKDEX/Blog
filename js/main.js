@@ -1,15 +1,36 @@
 ﻿
+
+
+
+
+
+
+
+
 function RI(RI){
     document.cookie="ReadItem="+RI;
     console.log("阅读的是:"+RI);
+    const json = fetch("../container/1.json")
+    //.then(response => {
+    //   return response.json();
+    //})
+    //.then(jsondata => console.log(jsondata));
+    const json_data = JSON.parse(json);
+    console.log(json_data);
 }
 
 
 
 function list(){
+    var W = document.body.clientWidth;
+    if(W<768){
+        document.getElementById('sidebar').style.width = '30%';
+        document.getElementById('sidebar').style.animationName = 'PEsidebar';
+    }else{
+        document.getElementById('sidebar').style.width = '25em';
+        document.getElementById('sidebar').style.animationName = 'PCsidebar';
+    }
     console.log("sidebar")
-    document.getElementById('sidebar').style.width = '25em';
-    document.getElementById('sidebar').style.animationName = 'sidebar';
     document.getElementById('sidebar-mask').style.display = 'unset';
     document.getElementById('sidebar-mask').style.animationName = 'sidebar-mask';
     var right = document.getElementById("sidebar").getBoundingClientRect().right;
@@ -19,13 +40,16 @@ function list(){
 }
 
 function mask(){
+    if(W<768){
+        document.getElementById('sidebar').style.width = '30%';
+        document.getElementById('sidebar').style.animationName = 'PEsidebar';
+    }else{
+        document.getElementById('sidebar').style.width = '25em';
+        document.getElementById('sidebar').style.animationName = 'PCsidebar';
+    }
     document.getElementById('sidebar').style.animationName = 'sidebarClose';
     document.getElementById('sidebar').style.width = '0%';
     document.getElementById('sidebar-mask').style.display = 'none';
-
-
-
-
 }
 
 

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <html lang="zh-cn">
 <head>
@@ -47,7 +47,7 @@
             </ul>
             
             <ul class='header-menu-search'>
-                <a href='javascript:void(0);'>
+                <a onclick='W()' href='javascript:void(0);'>
                     <li>
                         <i class="fa fa-search"></i>
                     </li>
@@ -76,13 +76,6 @@
         <div class='container'  onclick="A()">
 
             <?php
-                 
-
-
-                $pageURL = $_SERVER["REQUEST_URI"];
-                echo $pageURL;
-
-
                 $n = 1;
                 while(file_exists('./container/'.$n.'.json')){
                     $n++;
@@ -98,18 +91,17 @@
                     echo "<section class='container-main' id='container-main'>
                             <article class='container-main-article'>
                                 <div class='container-main-article-row'>
-                                    <a onclick=RI(".$n.") href='/container/index.php'>
+                                    <a onclick=RI(".$n.") href='/container/index.php?r=".$n."'>
                                         <img class='container-main-article-row-img' src='./img/Blog.jpg'>
                                     </a>
-                                    <a onclick=RI(".$n.") href='/container/index.php'>
-                                        <h2>".$json['title']."</h2>
+                                    <a onclick=RI(".$n.") href='/container/index.php?r=".$n."'>
+                                        <h2>".$json['Title']."</h2>
                                     </a>
                                         <p>".mb_substr($json['Container'],0,120)."...</p>
                                     <div class='container-main-article-row-detailed'>
                                         <a class='container-main-article-row-detailed-time' id='time'><i class='fa fa-calendar'></i>1145-14-19</a>
-                                        <a class='container-main-article-row-detailed-reads'><i class='fa fa-eye'></i>".$json['reads']."次阅读</a>
-                                        <a></a>
-                                        <a class='container-main-article-row-detailed-live'><i class='fa fa-thumbs-o-up'></i>".$json['live']."人点赞</a>
+                                        <a class='container-main-article-row-detailed-reads'><i class='fa fa-eye'></i>".$json['Reads']."次阅读</a>
+                                        <a class='container-main-article-row-detailed-live'><i class='fa fa-thumbs-o-up'></i>".$json['Live']."人点赞</a>
                                         <!-- <a class='container-main-article-row-detailed-live-act' href='javascript:void(1);' onclick='live()'><i class='fa fa-thumbs-o-up' id='live'></i></a> --!>
                                     </div>
                                 </div>
@@ -128,7 +120,7 @@
     <div class='footer-about' id='footer-about'>
         <footer>
             <div class='footer-about-container'>
-                <span>Copyright  2021 'TEMP'. All rights reserved. |  </span>    <span id='Clock' class='Clock'></span>
+            <span style="text-decoration: line-through">Copyright <i class="fa fa-copyright" style="text-decoration: line-through"></i> 2021 'None'. All rights reserved. | </span>    <span id='Clock' class='Clock'></span>
                 <br><span>MADE BY ME </span>
             </div>
         </footer>

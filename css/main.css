@@ -35,22 +35,22 @@ h3{
 .container-main-article-row-detailed{
     border-top: solid 1px #f3f3f3;
     padding: 1em;
-    text-align:start;
+    text-align: center;
     color: #333;
     font-size: initial;
 }
 .container-main-article-row-detailed-time{
-    padding: 1em;
+    
     padding-left: 0;
     color: #333;
     
 }
 .container-main-article-row-detailed-reads{
-    padding: 1mm;
+
     color: #333;
 }
 .container-main-article-row-detailed-live{
-    padding: 1em;
+
     color: #333;
 }
 

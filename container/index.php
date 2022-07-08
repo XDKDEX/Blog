@@ -3,9 +3,11 @@
 <html lang="zh-cn">
 <head>
 <!-- name:DefintElis -->
-    <title>主页</title>
+    <?php
+
+                    ?>
     <link rel="stylesheet" href='./../../css/basic.css'>
-    <!-- <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css"> -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
     <meta charset="UTF-8">
     <link rel="icon" href="./img/logo/icon.png">
     <link rel="stylesheet" href="./css/mian.css">
@@ -14,11 +16,10 @@
     <!--Plug-in-Start-->
     
         <!--Aplayer-Start-->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="./../../Plug-in/APlayer/APlayer.min.css">
         <script src="./../../Plug-in/APlayer/APlayer.min.js"></script>
             <!-- APlayer-MetingJS -->
-                <script src="./../..//Plug-in/Meting/Meting.min.js"></script>
+<!--                <script src="./../..//Plug-in/Meting/Meting.min.js"></script>
                 <meting-js server="netease" type="playlist" id="7366701902" fixed="true" order="random" autoplayer="true" lrctype="1"></meting-js>
             <!-- APlayer-MetingJS -->
         <!--Aplayer-End-->
@@ -58,36 +59,39 @@
     <div class='placeholder'></div>
     <div class='container'>
         <?php
-                $n = $_COOKIE["ReadItem"];
-                $xml = simplexml_load_file('./'.$n.'.xml');
+                    $pageURL = $_SERVER["REQUEST_URI"];
+                    $n = preg_replace('/[^0-9]/','',$pageURL);
+    
+                    $json_source = file_get_contents('./'.$n.'.json');
+                    $json = json_decode($json_source, true);
+
+
+                    
+                    echo "<title>".$json['Title']."</title>";
+
+
+
+
                     echo "
                                 <header class='title'>
-
-
-
-                                    <a>
-                                        <h2>".$xml->title."</h2>
-                                    </a>
-
+                                        <h2>".$json['Title']."</h2>
                                     <div class='container-detailed'>
                                         <a class='container-detailed-time' id='time'><i class='fa fa-calendar'></i>1145-14-19</a>
-                                        <a class='container-detailed-reads'><i class='fa fa-eye'></i>".$xml->reads."次阅读</a>
-                                        <a></a>
-                                        <a class='container-detailed-live'><i class='fa fa-thumbs-o-up'></i>".$xml->live."人点赞</a>
+                                        <a class='container-detailed-reads'><i class='fa fa-eye'></i>".$json['Reads']."次阅读</a>
+                                        <a class='container-detailed-live'><i class='fa fa-thumbs-o-up'></i>".$json['Live']."人点赞</a>
                                         <!-- <a class='container-detailed-live-act' href='javascript:void(1);' onclick='live()'><i class='fa fa-thumbs-o-up' id='live'></i></a> --!>
                                     </div>
                                 </header>
-                                <ol>彻底重写
-                                    <li>".$xml->plan1."</li>
-                                    <li>".$xml->plan2."</li>
-                                    <li>".$xml->plan3."</li>
-                                </ol>
                         ";
             ?>
         <div class='detailed'>
-            
-    </div>
-
+            <?php
+                echo $json['Container'];
+            ?>
+        </div>
+        <div class='Comments'>
+        
+        </div>
 
 
 
@@ -101,7 +105,7 @@
     <div class='footer-about' id='footer-about'>
         <footer>
             <div class='footer-about-container'>
-                <span>Copyright  2021 'TEMP'. All rights reserved. | </span>    <a id='Clock' class='Clock'></a>
+                <span style="text-decoration: line-through">Copyright <i class="fa fa-copyright" style="text-decoration: line-through"></i> 2021 'None'. All rights reserved. | </span>    <span id='Clock' class='Clock'></span>
                 <br><span>MADE BY ME </span>
             </div>
         </footer>
