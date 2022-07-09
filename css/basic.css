@@ -5,6 +5,7 @@ body{
     font-family: "等线";
     margin: 0;
     text-decoration: none;
+    word-break:break-all;
 }
 a{
     cursor: url(../img/cursor/pointer.cur),pointer;
@@ -58,19 +59,18 @@ i{
 
 .sidebar-mask{
     height: 100%;
-    width: 100%;
     background-color: rgba(0, 0, 0,.6);
     opacity: .8;
     position: fixed;
     z-index: 99;
-    animation: sidebar-mask .6s;
+    animation-duration: .6s;
 }@keyframes sidebar-mask{
-    0%{opacity: .4;}
-    100%{opacity: .8;}
+    0%{opacity: .4;height: 100%;width: 100%;}
+    100%{opacity: .8;height: 100%;width: 100%;}
+}@keyframes sidebar-maskC{
+    0%{opacity: .8;height: 100%;width: 100%;}
+    100%{opacity: .0;height: 100%;width: 100%;}
 }
-
-
-
 
 
 
@@ -155,17 +155,7 @@ i{
 
 
 
-.code{
-    margin: 1em;
-    padding: 1em;
-    background-color:#0e111a;
-}
-code{
-    color: #a3a9b3;
-    src: url(../fonts/consola.ttf);
-    font-family: "consolas";
-    font-size: small;
-}
+
 
 
 

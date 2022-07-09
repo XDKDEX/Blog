@@ -89,8 +89,29 @@
                 echo $json['Container'];
             ?>
         </div>
+
+        </div>
         <div class='Comments'>
-        
+        <?php
+                $C = 1;
+                while(isset($json['Comments']['ID'][''.$C.''])){$C++;}$C--;
+                while(isset($json['Comments']['ID'][''.$C.''])){
+
+                    echo "  <div class='Comments-header'>    
+                                <img src='../img/Blog.jpg'>
+                                <div class='Comments-header-detailed'>
+                                    <cite class='Name'>".$json['Comments']['ID'][''.$C.'']['Name']."</cite>
+                                    <cite class='Time'>".$json['Comments']['ID'][''.$C.'']['Time']."</cite>
+                                </div>
+                            </div>
+                    ";
+                    echo "  <div class='Text'>
+                                ".$json['Comments']['ID'][''.$C.'']['Text']."
+                            </div>
+                    ";
+                    $C--;   
+                }
+            ?>
         </div>
 
 
@@ -101,7 +122,7 @@
 
 
 
-    </div>
+
     <div class='footer-about' id='footer-about'>
         <footer>
             <div class='footer-about-container'>

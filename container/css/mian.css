@@ -1,3 +1,6 @@
+.body{
+    word-wrap:break-word;
+}
 .placeholder{
     height: 3em;
 }
@@ -33,3 +36,76 @@ p{
     text-align: center;
     max-width: 100%;
 }   
+
+
+
+
+
+
+
+
+
+.code{
+    margin: 1em;
+    padding: 1em;
+    background-color:#0e111a;
+}
+code{
+    color: #a3a9b3;
+    src: url(../fonts/consola.ttf);
+    font-family: "consolas";
+    font-size: small;
+}
+
+
+
+
+
+
+
+
+
+
+.Comments{
+    background-color: #f5f5f5;
+    margin-top: 1em;
+    padding: 5pt;
+}
+.Comments-header{
+    display: flex;
+}
+.Comments-header img{
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 15px 0px rgb(0 0 0 / 50%);
+}
+.Comments-header-detailed{
+    margin-left: 10px;
+    display: grid;
+}
+
+.Comments div{
+    padding: 5pt;
+}
+.Comments .Text{
+    margin-left: 1em;
+}
+.Comments-header-detailed .Name{
+    font-style: normal;
+    font-size: large;
+}
+.Comments-header-detailed .Time{
+    font-style: normal;
+    font-size: inherit;
+}
+
+
+
+
+
+
+
+
+
+

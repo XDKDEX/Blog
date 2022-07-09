@@ -58,7 +58,7 @@
     </div>
 
     <div class='sidebar' id='sidebar' style="width: 0%;"></div>
-    <div class='sidebar-mask' id='sidebar-mask' onclick='mask()' style="display: none;"></div>
+    <div class='sidebar-mask' id='sidebar-mask' onclick='mask()'style="width: 0%;"></div>
 
 
 
