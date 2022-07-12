@@ -54,8 +54,16 @@
                 </a>
             </ul>
         </div>
-
+        
     </div>
+
+
+
+
+
+
+
+
 
     <div class='sidebar' id='sidebar' style="width: 0%;"></div>
     <div class='sidebar-mask' id='sidebar-mask' onclick='mask()'style="width: 0%;"></div>
@@ -101,8 +109,8 @@
                                     <div class='container-main-article-row-detailed'>
                                         <a class='container-main-article-row-detailed-time' id='time'><i class='fa fa-calendar'></i>1145-14-19</a>
                                         <a class='container-main-article-row-detailed-reads'><i class='fa fa-eye'></i>".$json['Reads']."次阅读</a>
-                                        <a onclick=live(".$n.") class='container-main-article-row-detailed-live'><i class='fa fa-thumbs-o-up'></i>".$json['Live']."人点赞</a>
-                                        <!-- <a class='container-main-article-row-detailed-live-act' href='javascript:void(1);' onclick='live()'><i class='fa fa-thumbs-o-up' id='live'></i></a> --!>
+                                        <a onclick=Live(".$n.") class='container-main-article-row-detailed-live'><i class='fa fa-thumbs-o-up'></i>".$json['Live']."人点赞</a>
+                                        <!-- <a class='container-main-article-row-detailed-live-act' href='javascript:void(1);' onclick='Live()'><i class='fa fa-thumbs-o-up' id='live'></i></a> --!>
                                     </div>
                                 </div>
                             </article>

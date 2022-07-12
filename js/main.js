@@ -13,6 +13,21 @@ function RI(RI){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function list(){
     var W = document.body.clientWidth;
     if(W<768){
@@ -47,13 +62,18 @@ function deving(){
     console.log("TEST");
 }
 
-function live(S){
-    console.log("AAA");
-    console.log(S);
+
+
+function Read(S){
+}
+
+
+
+function Live(S){
     var httpRequest = new XMLHttpRequest();//第一步：创建需要的对象
     httpRequest.open('POST', '../container/action.php', true); //第二步：打开连接
     httpRequest.setRequestHeader("Content-type","application/json");//设置请求头 注：post方式必须设置请求头（在建立连接后设置请求头）
-    httpRequest.send('utrtrtyjrytklklrylktrly');//发送请求 将情头体写在send中
+    httpRequest.send("Live "+S);//发送请求 将情头体写在send中
 }
 /*
 常用事件：

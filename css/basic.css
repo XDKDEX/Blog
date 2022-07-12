@@ -9,7 +9,12 @@ body{
 }
 a{
     cursor: url(../img/cursor/pointer.cur),pointer;
+    font-family: "等线";
     text-decoration: none;
+    transition: color 0.6s;
+}
+a:hover{
+    color: #a0d8ef;
 }
 h2{
     color: #333;
@@ -21,7 +26,6 @@ p{
     margin: 10px;
     font-size:large;
     word-wrap:break-word;
-
 }
 ul{
     list-style: none;
@@ -29,6 +33,27 @@ ul{
 i{
     font-size: initial;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .sidebar{

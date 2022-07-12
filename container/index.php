@@ -74,8 +74,8 @@
                                         <h2>".$json['Title']."</h2>
                                     <div class='container-detailed'>
                                         <a class='container-detailed-time' id='time'><i class='fa fa-calendar'></i>1145-14-19</a>
-                                        <a class='container-detailed-reads'><i class='fa fa-eye'></i>".$json['Reads']."次阅读</a>
-                                        <a class='container-detailed-live'><i class='fa fa-thumbs-o-up'></i>".$json['Live']."人点赞</a>
+                                        <a class='container-detailed-reads'><i class='fa fa-eye'></i>".$json['Reads']."次阅读</a></a>
+                                        <a class='container-detailed-live'><i class='fa fa-thumbs-o-up'></i><a id='LikeNumber'>".$json['Live']."人点赞</a></a>
                                         <!-- <a class='container-detailed-live-act' href='javascript:void(1);' onclick='live()'><i class='fa fa-thumbs-o-up' id='live'></i></a> --!>
                                     </div>
                                 </header>
