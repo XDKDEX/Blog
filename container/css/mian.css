@@ -12,9 +12,20 @@ h3{
     border-left: 6px #51aded solid;
     padding: 8px;
 }
-
-
-
+section{
+    margin-bottom: 1em;
+    padding-top: 1em;
+    border-top: 1px solid #e5e9ef;
+}
+textarea{
+    outline: none;
+    background: #eee;   
+    background-color: transparent;
+    border: 1px solid #ccc;
+    font-family: '等线';
+    font-size: 16px;
+    resize:none;
+}
 
 
 
@@ -22,6 +33,7 @@ h3{
 
 p{
     padding: 10px;
+    font-size: 16px;
 }
 .container{
     padding-bottom: 1em;
@@ -62,14 +74,20 @@ code{
 
 
 
-
-
+h7{
+    margin-bottom: 1em;
+}
+h8{
+    font-size: small;
+}
 
 
 .Comments{
-    background-color: #f5f5f5;
+    background-color: #fff;
     margin-top: 1em;
-    padding: 5pt;
+    margin-left: 0.1em;
+    margin-right: 0.2em;
+    padding: 0.8em 5pt 5pt 5pt;
 }
 .Comments-header{
     display: flex;
@@ -84,8 +102,98 @@ code{
     margin-left: 10px;
     display: grid;
 }
+.Comments-Sendarea{
+    margin-top: 1em;
+}
+.Comments-Sendarea-Text{
+    width: 100%;
+    height: 5em;
+    margin-bottom: 1em;
+}
+.Comments-Sendarea-User{
+    
+    display: flex;
+    border: 1px solid #ccc;
+    width: 100%;
+    align-items: center;
+}
+.Comments-Sendarea-User-Text{   
+    margin-left: 1px;
+    width: 100%;
+}
+.Comments-Sendarea-User textarea{
+    display: flex;
+    height: 30px;
+    line-height: 30px;
+    border: 0;
+    align-items: center;
+    padding: 0
 
-.Comments div{
+}
+.Comments-Sendarea-User-Icon{
+    background: #eee;
+    border-right: 1px solid #ccc;
+    padding: 8px 10px 8px 10px;
+}
+.need{
+    width: 1em;
+    color: #ccc;
+}
+
+
+
+
+
+.Comments-Sendarea-Email{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: flex;
+    border: 1px solid #ccc;
+    width: 100%;
+    align-items: center;
+}
+.Comments-Sendarea-Email-Text{
+    margin-left: 1px;
+    width: 100%;
+}
+.Comments-Sendarea-Email textarea{
+    display: flex;
+    height: 30px;
+    line-height: 30px;
+    border: 0;
+    align-items: center;
+    padding: 0
+}
+.Comments-Sendarea-Email-Icon{
+    background: #eee;
+    border-right: 1px solid #ccc;
+    padding: 8px 8px 8px 8px;
+}
+
+
+.Comments-Sendarea-Send{
+    margin-bottom: 1em;
+    background-color: #51aded;
+    text-align: center;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+.Comments-Sendarea-Send span{
+    font-size: large;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+.Comments section div{
     padding: 5pt;
 }
 .Comments .Text{
@@ -93,11 +201,11 @@ code{
 }
 .Comments-header-detailed .Name{
     font-style: normal;
-    font-size: large;
+    font-size: larger;
 }
 .Comments-header-detailed .Time{
     font-style: normal;
-    font-size: inherit;
+    font-size: small;
 }
 
 

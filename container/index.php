@@ -3,16 +3,13 @@
 <html lang="zh-cn">
 <head>
 <!-- name:DefintElis -->
-    <?php
-
-                    ?>
     <link rel="stylesheet" href='./../../css/basic.css'>
     <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
     <meta charset="UTF-8">
     <link rel="icon" href="./img/logo/icon.png">
     <link rel="stylesheet" href="./css/mian.css">
-    <script src="./../../js/Clock.js"></script>
-    
+    <script src="../js/Clock.js"></script>
+    <script src="../js/main.js"></script>
     <!--Plug-in-Start-->
     
         <!--Aplayer-Start-->
@@ -92,22 +89,45 @@
 
         </div>
         <div class='Comments'>
+            <h7>发表评论</h7><br><br>
+            <h8>必填项已用 * 标注</h8>
+            <div class='Comments-Sendarea'>
+                <textarea id='Comments-Send-Text-Get' class='Comments-Sendarea-Text' placeholder="随便说点什么吧"></textarea>
+                <div class='Comments-Sendarea-User'>
+                    <div class='Comments-Sendarea-User-Icon'><i class="fa fa-user"></i></div>
+                    <div class='Comments-Sendarea-User-Text'><textarea id='Comments-Send-User-Get' class='Comments-Sendarea-User-Text' placeholder="昵称"></textarea></div>
+                    <span class='need'>*</span>
+                </div>
+                <div class='Comments-Sendarea-Email'>
+                    <div class='Comments-Sendarea-Email-Icon'><i class="fa fa-envelope"></i></div>
+                    <div  class='Comments-Sendarea-Email-Text'><textarea disabled id='Comments-Sendarea-Email-Get' class='Comments-Sendarea-Email-Text'  placeholder="开发中。。。"></textarea></div>
+                    <span class='need'>*</span>
+                </div>                 
+                
+                <a onclick='SendComments()'>
+                    <div class='Comments-Sendarea-Send'>
+                       <span>发表评论</span>
+                    </div>
+                </a>
+            </div> 
+        </div>
         <?php
                 $C = 1;
                 while(isset($json['Comments']['ID'][''.$C.''])){$C++;}$C--;
                 while(isset($json['Comments']['ID'][''.$C.''])){
 
-                    echo "  <div class='Comments-header'>    
-                                <img src='../img/Blog.jpg'>
-                                <div class='Comments-header-detailed'>
-                                    <cite class='Name'>".$json['Comments']['ID'][''.$C.'']['Name']."</cite>
-                                    <cite class='Time'>".$json['Comments']['ID'][''.$C.'']['Time']."</cite>
+                    echo "  <section>
+                                <div class='Comments-header'>    
+                                    <img src='../img/Blog.jpg'>
+                                    <div class='Comments-header-detailed'>
+                                        <cite class='Name'>".$json['Comments']['ID'][''.$C.'']['Name']."</cite>
+                                        <cite class='Time'>".$json['Comments']['ID'][''.$C.'']['Time']."</cite>
+                                    </div>
                                 </div>
-                            </div>
-                    ";
-                    echo "  <div class='Text'>
-                                ".$json['Comments']['ID'][''.$C.'']['Text']."
-                            </div>
+                                <div class='Text'>
+                                    ".$json['Comments']['ID'][''.$C.'']['Text']."
+                                </div>
+                            </section>
                     ";
                     $C--;   
                 }
@@ -123,6 +143,10 @@
 
 
 
+    
+
+    
+
     <div class='footer-about' id='footer-about'>
         <footer>
             <div class='footer-about-container'>
@@ -133,4 +157,4 @@
     </div>
 
 </body>
-</html><!--https://xdkdex.github.io/Project-Ir 铱在350°C的熔融氢氧化钠中（未通入空气）极其耐腐蚀，腐蚀率小于0.005mm/年(约3.5mdd)，但400°C以上的熔融氢氧化钠对铱的腐蚀很严重；熔融的氢氧化钾也可以强烈腐蚀铱。-->
+</html><!--  ( ゜- ゜)つロ_(:з」∠)_（⌒▽⌒）（￣▽￣）(=・ω・=)(*°▽°*)八(*°▽°*)♪✿ヽ(°▽°)ノ✿(¦3【▓▓】눈_눈(ಡωಡ)_(≧∇≦」∠)_━━━∑(ﾟ□ﾟ*川━(｀・ω・´)(￣3￣)✧(≖ ◡ ≖✿)(･∀･)(〜￣△￣)〜→_→(°∀°)ﾉ╮(￣▽￣)╭( ´_ゝ｀)←_←(;¬_¬)(ﾟДﾟ≡ﾟдﾟ)!?( ´･･)ﾉ(._.`)Σ(ﾟдﾟ;)Σ( ￣□￣||)<(´；ω；`)（/TДT)/(^・ω・^ )(｡･ω･｡)(●￣(ｴ)￣●)ε=ε=(ノ≧∇≦)ノ(´･_･`)(-_-#)（￣へ￣）(￣ε(#￣) Σ(╯°口°)╯(┴—┴ヽ(`Д´)ﾉ("▔□▔)/(º﹃º )(๑>؂<๑）｡ﾟ(ﾟ´Д｀)ﾟ｡(∂ω∂)(┯_┯)(・ω< )★( ๑ˊ•̥▵•)੭₎₎¥ㄟ(´･ᴗ･`)ノ¥Σ_(꒪ཀ꒪」∠)_٩(๛ ˘ ³˘)۶❤(๑‾᷅^‾᷅๑)  https://xdkdex.github.io/Project-Ir 铱在350°C的熔融氢氧化钠中（未通入空气）极其耐腐蚀，腐蚀率小于0.005mm/年(约3.5mdd)，但400°C以上的熔融氢氧化钠对铱的腐蚀很严重；熔融的氢氧化钾也可以强烈腐蚀铱。-->

@@ -8,15 +8,7 @@
 
 
 function RI(RI){
-    document.cookie="ReadItem="+RI;
     console.log("阅读的是:"+RI);
-    const json = fetch("../container/1.json")
-    //.then(response => {
-    //   return response.json();
-    //})
-    //.then(jsondata => console.log(jsondata));
-    const json_data = JSON.parse(json);
-    console.log(json_data);
 }
 
 
@@ -31,25 +23,23 @@ function list(){
         document.getElementById('sidebar').style.animationName = 'PCsidebar';
     }
     console.log("sidebar")
-    document.getElementById('sidebar-mask').style.display = 'unset';
+    document.getElementById('sidebar-mask').style.width = '100%';
     document.getElementById('sidebar-mask').style.animationName = 'sidebar-mask';
-    var right = document.getElementById("sidebar").getBoundingClientRect().right;
-    console.log(right);
-    //document.getElementById('sidebar').style.display = 'unset';
     
 }
 
 function mask(){
+    
+    var W = document.body.clientWidth;
     if(W<768){
-        document.getElementById('sidebar').style.width = '30%';
-        document.getElementById('sidebar').style.animationName = 'PEsidebar';
+        document.getElementById('sidebar').style.animationName = 'PEsidebarClose';
     }else{
-        document.getElementById('sidebar').style.width = '25em';
-        document.getElementById('sidebar').style.animationName = 'PCsidebar';
+        document.getElementById('sidebar').style.animationName = 'PCsidebarClose';
     }
-    document.getElementById('sidebar').style.animationName = 'sidebarClose';
-    document.getElementById('sidebar').style.width = '0%';
-    document.getElementById('sidebar-mask').style.display = 'none';
+        document.getElementById('sidebar').style.width = '0%';
+
+    document.getElementById('sidebar-mask').style.animationName = 'sidebar-maskC';
+    document.getElementById('sidebar-mask').style.width = '0%';
 }
 
 
@@ -57,8 +47,13 @@ function deving(){
     console.log("TEST");
 }
 
-function A(){
+function live(S){
     console.log("AAA");
+    console.log(S);
+    var httpRequest = new XMLHttpRequest();//第一步：创建需要的对象
+    httpRequest.open('POST', '../container/action.php', true); //第二步：打开连接
+    httpRequest.setRequestHeader("Content-type","application/json");//设置请求头 注：post方式必须设置请求头（在建立连接后设置请求头）
+    httpRequest.send('utrtrtyjrytklklrylktrly');//发送请求 将情头体写在send中
 }
 /*
 常用事件：
@@ -78,8 +73,22 @@ function A(){
      加载事件:onload
      卸载事件:onunload
      SELECT:onchange
-
 */
+
+
+function SendComments(){
+    //var pattern = /[~!@#$%^&*()_+A-Za-z0-9_\-\u4e00-\u9fa5]+/;
+    //var str = document.getElementById('Comments-Send-User-Get').value;
+    //console.log(pattern.test(str));
+
+    if(document.getElementById('Comments-Send-Text-Get').value = ' '){
+        console.log("A")
+    }
+    //var Name = document.getElementById('Comments-Sendarea-User-Get').value;   
+    //var Text = $('#Comments-Send-Text').val();
+    console.log(document.getElementById('Comments-Send-Text-Get').value);
+
+}
 
 
 

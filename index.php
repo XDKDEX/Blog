@@ -73,7 +73,7 @@
 
 
 
-        <div class='container'  onclick="A()">
+        <div class='container'>
 
             <?php
                 $n = 1;
@@ -101,7 +101,7 @@
                                     <div class='container-main-article-row-detailed'>
                                         <a class='container-main-article-row-detailed-time' id='time'><i class='fa fa-calendar'></i>1145-14-19</a>
                                         <a class='container-main-article-row-detailed-reads'><i class='fa fa-eye'></i>".$json['Reads']."次阅读</a>
-                                        <a class='container-main-article-row-detailed-live'><i class='fa fa-thumbs-o-up'></i>".$json['Live']."人点赞</a>
+                                        <a onclick=live(".$n.") class='container-main-article-row-detailed-live'><i class='fa fa-thumbs-o-up'></i>".$json['Live']."人点赞</a>
                                         <!-- <a class='container-main-article-row-detailed-live-act' href='javascript:void(1);' onclick='live()'><i class='fa fa-thumbs-o-up' id='live'></i></a> --!>
                                     </div>
                                 </div>
