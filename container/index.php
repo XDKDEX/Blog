@@ -74,8 +74,8 @@
                                         <h2>".$json['Title']."</h2>
                                     <div class='container-detailed'>
                                         <a class='container-detailed-time' id='time'><i class='fa fa-calendar'></i>1145-14-19</a>
-                                        <a class='container-detailed-reads'><i class='fa fa-eye'></i>".$json['Reads']."次阅读</a></a>
-                                        <a class='container-detailed-live'><i class='fa fa-thumbs-o-up'></i><a id='LikeNumber'>".$json['Live']."人点赞</a></a>
+                                        <a class='container-detailed-Read'><i class='fa fa-eye'></i>".$json['Read']."次阅读</a></a>
+                                        <a  onclick=Live(".$n.") class='container-detailed-live'><i class='fa fa-thumbs-o-up'></i>".$json['Live']."人点赞</a>
                                         <!-- <a class='container-detailed-live-act' href='javascript:void(1);' onclick='live()'><i class='fa fa-thumbs-o-up' id='live'></i></a> --!>
                                     </div>
                                 </header>
@@ -93,6 +93,40 @@
             <h8>必填项已用 * 标注</h8>
             <div class='Comments-Sendarea'>
                 <textarea id='Comments-Send-Text-Get' class='Comments-Sendarea-Text' placeholder="随便说点什么吧"></textarea>
+                <div class='Comments-Sendarea-emoji'><a>表情</a><div style="
+    position: absolute;
+    height: 8em;
+    width: 32em;
+    background: #3300ff;
+    border: 1px solid #ccc;
+    border-radius: 0 5px 5px 5px;
+    padding: 0.1em;
+    display: block;
+">
+
+    <ul style="
+    margin: 0;
+    margin-left: 0;
+    padding: 0;
+    list-style: none;
+">
+        <li><div style="
+    height: 6em;
+    overflow: auto;
+    scroll-margin: 0;
+"></div></li>
+        <li><div>OvO</div></li>
+        
+    </ul>
+<ul style="
+    margin: 0;
+    margin-left: 0;
+    padding: 0;
+    list-style: none;
+">
+        <li><div>OvO</div></li>
+        
+    </ul></div></div>
                 <div class='Comments-Sendarea-User'>
                     <div class='Comments-Sendarea-User-Icon'><i class="fa fa-user"></i></div>
                     <div class='Comments-Sendarea-User-Text'><textarea id='Comments-Send-User-Get' class='Comments-Sendarea-User-Text' placeholder="昵称"></textarea></div>
@@ -155,6 +189,6 @@
             </div>
         </footer>
     </div>
-
+    <script></script>
 </body>
 </html><!--  ( ゜- ゜)つロ_(:з」∠)_（⌒▽⌒）（￣▽￣）(=・ω・=)(*°▽°*)八(*°▽°*)♪✿ヽ(°▽°)ノ✿(¦3【▓▓】눈_눈(ಡωಡ)_(≧∇≦」∠)_━━━∑(ﾟ□ﾟ*川━(｀・ω・´)(￣3￣)✧(≖ ◡ ≖✿)(･∀･)(〜￣△￣)〜→_→(°∀°)ﾉ╮(￣▽￣)╭( ´_ゝ｀)←_←(;¬_¬)(ﾟДﾟ≡ﾟдﾟ)!?( ´･･)ﾉ(._.`)Σ(ﾟдﾟ;)Σ( ￣□￣||)<(´；ω；`)（/TДT)/(^・ω・^ )(｡･ω･｡)(●￣(ｴ)￣●)ε=ε=(ノ≧∇≦)ノ(´･_･`)(-_-#)（￣へ￣）(￣ε(#￣) Σ(╯°口°)╯(┴—┴ヽ(`Д´)ﾉ("▔□▔)/(º﹃º )(๑>؂<๑）｡ﾟ(ﾟ´Д｀)ﾟ｡(∂ω∂)(┯_┯)(・ω< )★( ๑ˊ•̥▵•)੭₎₎¥ㄟ(´･ᴗ･`)ノ¥Σ_(꒪ཀ꒪」∠)_٩(๛ ˘ ³˘)۶❤(๑‾᷅^‾᷅๑)  https://xdkdex.github.io/Project-Ir 铱在350°C的熔融氢氧化钠中（未通入空气）极其耐腐蚀，腐蚀率小于0.005mm/年(约3.5mdd)，但400°C以上的熔融氢氧化钠对铱的腐蚀很严重；熔融的氢氧化钾也可以强烈腐蚀铱。-->

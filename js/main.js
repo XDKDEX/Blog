@@ -65,6 +65,10 @@ function deving(){
 
 
 function Read(S){
+    var httpRequest = new XMLHttpRequest();//第一步：创建需要的对象
+    httpRequest.open('POST', '../container/action.php', true); //第二步：打开连接
+    httpRequest.setRequestHeader("Content-type","application/json");//设置请求头 注：post方式必须设置请求头（在建立连接后设置请求头）
+    httpRequest.send("Read "+S);//发送请求 将情头体写在send中
 }
 
 
@@ -107,9 +111,14 @@ function SendComments(){
     //var Name = document.getElementById('Comments-Sendarea-User-Get').value;   
     //var Text = $('#Comments-Send-Text').val();
     console.log(document.getElementById('Comments-Send-Text-Get').value);
+}
+function SendComments_emoji(ID){
+    
+    
+    document.getElementById('Comments-Send-Text-Get').value = document.getElementById('Comments-Send-Text-Get').value + "";
+
 
 }
-
 
 
 

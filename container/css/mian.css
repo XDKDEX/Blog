@@ -18,7 +18,6 @@ section{
     border-top: 1px solid #e5e9ef;
 }
 textarea{
-    outline: none;
     background: #eee;   
     background-color: transparent;
     border: 1px solid #ccc;
@@ -105,10 +104,18 @@ h8{
 .Comments-Sendarea{
     margin-top: 1em;
 }
+.Comments-Sendarea-emoji{
+    margin-bottom: 1em;
+    width: max-content;
+    height: max-content;
+    border: 1px solid #ccc;
+    padding: 1px;
+    padding-right: 2px;
+    border-radius: 5px;
+}
 .Comments-Sendarea-Text{
     width: 100%;
     height: 5em;
-    margin-bottom: 1em;
 }
 .Comments-Sendarea-User{
     
