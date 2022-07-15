@@ -93,48 +93,21 @@
             <h8>必填项已用 * 标注</h8>
             <div class='Comments-Sendarea'>
                 <textarea id='Comments-Send-Text-Get' class='Comments-Sendarea-Text' placeholder="随便说点什么吧"></textarea>
-                <div class='Comments-Sendarea-emoji'><a>表情</a><div style="
-    position: absolute;
-    height: 8em;
-    width: 32em;
-    background: #3300ff;
-    border: 1px solid #ccc;
-    border-radius: 0 5px 5px 5px;
-    padding: 0.1em;
-    display: block;
-">
+                <div class='Comments-Sendarea-emoji'>
+                    <a>表情(开发中)</a>
 
-    <ul style="
-    margin: 0;
-    margin-left: 0;
-    padding: 0;
-    list-style: none;
-">
-        <li><div style="
-    height: 6em;
-    overflow: auto;
-    scroll-margin: 0;
-"></div></li>
-        <li><div>OvO</div></li>
-        
-    </ul>
-<ul style="
-    margin: 0;
-    margin-left: 0;
-    padding: 0;
-    list-style: none;
-">
-        <li><div>OvO</div></li>
-        
-    </ul></div></div>
+
+                    
+                </div> 
+            </div>
                 <div class='Comments-Sendarea-User'>
                     <div class='Comments-Sendarea-User-Icon'><i class="fa fa-user"></i></div>
-                    <div class='Comments-Sendarea-User-Text'><textarea id='Comments-Send-User-Get' class='Comments-Sendarea-User-Text' placeholder="昵称"></textarea></div>
+                    <div class='Comments-Sendarea-User-Text'><textarea id='Comments-Send-User-Get' class='Comments-Sendarea-User-Text' placeholder="昵称" onclick='CheckTextarea()'></textarea></div>
                     <span class='need'>*</span>
                 </div>
                 <div class='Comments-Sendarea-Email'>
                     <div class='Comments-Sendarea-Email-Icon'><i class="fa fa-envelope"></i></div>
-                    <div  class='Comments-Sendarea-Email-Text'><textarea disabled id='Comments-Sendarea-Email-Get' class='Comments-Sendarea-Email-Text'  placeholder="开发中。。。"></textarea></div>
+                    <div  class='Comments-Sendarea-Email-Text'><textarea disabled id='Comments-Sendarea-Email-Get' class='Comments-Sendarea-Email-Text'  placeholder="开发中"></textarea></div>
                     <span class='need'>*</span>
                 </div>                 
                 
@@ -145,24 +118,53 @@
                 </a>
             </div> 
         </div>
-        <?php
-                $C = 1;
-                while(isset($json['Comments']['ID'][''.$C.''])){$C++;}$C--;
-                while(isset($json['Comments']['ID'][''.$C.''])){
 
-                    echo "  <section>
-                                <div class='Comments-header'>    
-                                    <img src='../img/Blog.jpg'>
-                                    <div class='Comments-header-detailed'>
-                                        <cite class='Name'>".$json['Comments']['ID'][''.$C.'']['Name']."</cite>
-                                        <cite class='Time'>".$json['Comments']['ID'][''.$C.'']['Time']."</cite>
-                                    </div>
-                                </div>
-                                <div class='Text'>
-                                    ".$json['Comments']['ID'][''.$C.'']['Text']."
-                                </div>
-                            </section>
-                    ";
+
+
+
+
+
+
+
+
+        <div>
+            <?php
+                    $C = 1;
+                    $R = 1;
+                    while(isset($json['Comments']['ID'][''.$C.''])){$C++;}$C--;
+                    while(isset($json['Comments']['ID'][''.$C.''])){
+
+                        echo "  <section>
+                                    <ul>
+                                        <div class='Comments-header'>    
+                                            <img src='../img/Blog.jpg'>
+                                            <div class='Comments-header-detailed'>
+                                                <cite class='Name'>".$json['Comments']['ID'][''.$C.'']['Name']."</cite>
+                                                <cite class='Time'>".$json['Comments']['ID'][''.$C.'']['Time']."</cite>
+                                            </div>
+                                        </div>
+                                        <div class='Text'>
+                                            ".$json['Comments']['ID'][''.$C.'']['Text']."
+                                        </div>
+                                ";
+                    if(0){
+                        echo "      <ul>
+                                        <div class='Comments-header'>    
+                                            <img src='../img/Blog.jpg'>
+                                            <div class='Comments-header-detailed'>
+                                                <cite class='Name'>".$json['Comments']['ID']['1']['Reply']['ReplyID']['1']['Name']."</cite>
+                                                <cite class='Time'>".$json['Comments']['ID']['1']['Reply']['ReplyID']['1']['Time']."</cite>
+                                            </div>
+                                        </div>
+                                        <div class='Text'>
+                                            ".$json['Comments']['ID']['1']['Reply']['ReplyID']['1']['Text']."
+                                        </div>
+                                    </ul>
+                        ";
+                    }
+                        echo "      </ul>
+                                </section>
+                        ";
                     $C--;   
                 }
             ?>

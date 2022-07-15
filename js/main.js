@@ -99,18 +99,18 @@ function Live(S){
      SELECT:onchange
 */
 
-
 function SendComments(){
     //var pattern = /[~!@#$%^&*()_+A-Za-z0-9_\-\u4e00-\u9fa5]+/;
     //var str = document.getElementById('Comments-Send-User-Get').value;
     //console.log(pattern.test(str));
-
-    if(document.getElementById('Comments-Send-Text-Get').value = ' '){
+    //检测textarea区域
+    if(document.getElementById('Comments-Send-Text-Get').value == ''){
         console.log("A")
+    }else{
+        console.log(document.getElementById('Comments-Send-Text-Get').value);
     }
     //var Name = document.getElementById('Comments-Sendarea-User-Get').value;   
     //var Text = $('#Comments-Send-Text').val();
-    console.log(document.getElementById('Comments-Send-Text-Get').value);
 }
 function SendComments_emoji(ID){
     
