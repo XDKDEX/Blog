@@ -29,8 +29,8 @@ h3{
 }
 .container-main-article-row-img{
     height: auto;
-    max-width: 100%;
     width: 100%;
+    max-width: 100%;
 }
 .container-main-article-row-detailed{
     border-top: solid 1px #f3f3f3;

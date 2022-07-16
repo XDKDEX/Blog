@@ -4,6 +4,10 @@
 .placeholder{
     height: 3em;
 }
+.main{
+    margin-left: 2em;
+    margin-right: 2em;
+}
 h2{
     padding-top: 1em;
     padding-bottom: 8px;
@@ -14,8 +18,12 @@ h3{
 }
 section{
     margin-bottom: 1em;
-    padding-top: 1em;
-    border-top: 1px solid #e5e9ef;
+    padding: 0;
+    border: 1px solid #e5e9ef;
+}
+section ul{
+    padding: 0;
+    margin-left: 1em;
 }
 textarea{
     background: #eee;   
@@ -56,21 +64,30 @@ p{
 
 
 
-.code{
+.detailed .code{
     margin: 1em;
     padding: 1em;
     background-color:#0e111a;
 }
-code{
+.detailed code{
     color: #a3a9b3;
     src: url(../fonts/consola.ttf);
     font-family: "consolas";
     font-size: small;
 }
 
-
-
-
+.detailed img{
+    height: 236px;
+    width: auto;
+    max-width: 100%;
+}
+/*
+    border: 1px solid #e5e9ef;
+    margin-left: 1em;
+    padding-left: 1em;
+    padding: 1em;
+    margin-right: 1em;
+*/
 
 
 h7{
@@ -84,9 +101,8 @@ h8{
 .Comments{
     background-color: #fff;
     margin-top: 1em;
-    margin-left: 0.1em;
-    margin-right: 0.2em;
-    padding: 0.8em 5pt 5pt 5pt;
+    padding: 0.8em 10pt 5pt 5pt;
+    margin-bottom: 1em;
 }
 .Comments-header{
     display: flex;
@@ -214,8 +230,17 @@ h8{
     font-style: normal;
     font-size: small;
 }
-
-
+.Reply{
+    text-align:end;
+    padding-right: 1em;
+}
+.Reply a{
+    background-color: #e5e5e5;   
+    border: 1px solid;
+    padding: 1px;
+    font-size: small;
+    border-radius: 2.5px;
+}
 
 
 

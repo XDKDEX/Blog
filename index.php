@@ -103,7 +103,7 @@
                                         <img class='container-main-article-row-img' src='./img/Blog.jpg'>
                                         <h2>".$json['Title']."</h2>
                                     </a>
-                                        <p>".mb_substr($json['Container'],0,120)."...</p>
+                                        <p>".$json['Simple']."...</p>
                                     <div class='container-main-article-row-detailed'>
                                         <a class='container-main-article-row-detailed-time' id='time'><i class='fa fa-calendar'></i>1145-14-19</a>
                                         <a class='container-main-article-row-detailed-Read'><i class='fa fa-eye'></i>".$json['Read']."次阅读</a>

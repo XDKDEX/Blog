@@ -53,9 +53,14 @@
             
         </div>
     </div>
+
+<nav class='main'>
+
     <div class='placeholder'></div>
+
     <div class='container'>
         <?php
+                    //echo $_SERVER['HTTP_USER_AGENT'];
                     $pageURL = $_SERVER["REQUEST_URI"];
                     $n = preg_replace('/[^0-9]/','',$pageURL);
     
@@ -102,7 +107,7 @@
             </div>
                 <div class='Comments-Sendarea-User'>
                     <div class='Comments-Sendarea-User-Icon'><i class="fa fa-user"></i></div>
-                    <div class='Comments-Sendarea-User-Text'><textarea id='Comments-Send-User-Get' class='Comments-Sendarea-User-Text' placeholder="昵称" onclick='CheckTextarea()'></textarea></div>
+                    <div class='Comments-Sendarea-User-Text'><textarea id='Comments-Send-User-Get' class='Comments-Sendarea-User-Text' placeholder="昵称"></textarea></div>
                     <span class='need'>*</span>
                 </div>
                 <div class='Comments-Sendarea-Email'>
@@ -145,24 +150,11 @@
                                         </div>
                                         <div class='Text'>
                                             ".$json['Comments']['ID'][''.$C.'']['Text']."
-                                        </div>
-                                ";
-                    if(0){
-                        echo "      <ul>
-                                        <div class='Comments-header'>    
-                                            <img src='../img/Blog.jpg'>
-                                            <div class='Comments-header-detailed'>
-                                                <cite class='Name'>".$json['Comments']['ID']['1']['Reply']['ReplyID']['1']['Name']."</cite>
-                                                <cite class='Time'>".$json['Comments']['ID']['1']['Reply']['ReplyID']['1']['Time']."</cite>
+                                            <div class='Reply'>
+                                                <a>回复</a>
                                             </div>
                                         </div>
-                                        <div class='Text'>
-                                            ".$json['Comments']['ID']['1']['Reply']['ReplyID']['1']['Text']."
-                                        </div>
                                     </ul>
-                        ";
-                    }
-                        echo "      </ul>
                                 </section>
                         ";
                     $C--;   
@@ -170,17 +162,9 @@
             ?>
         </div>
 
-
-
-
-
-
-
-
-
-
     
 
+</nav>
     
 
     <div class='footer-about' id='footer-about'>
