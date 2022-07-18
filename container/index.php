@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=.95">
 <html lang="zh-cn">
 <head>
 <!-- name:DefintElis -->

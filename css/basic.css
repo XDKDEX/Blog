@@ -6,6 +6,8 @@ body{
     margin: 0;
     text-decoration: none;
     word-break:break-all;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
 }
 a{
     cursor: url(../img/cursor/pointer.cur),pointer;
@@ -55,10 +57,9 @@ i{
 
 
 
-
 .sidebar{
     height: 100%;
-    background-color: whitesmoke;
+    background-color:whitesmoke;
     position: fixed;
     z-index: 100;
     animation-duration: .6s;

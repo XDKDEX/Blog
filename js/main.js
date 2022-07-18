@@ -5,6 +5,28 @@
 
 
 
+function Gethitokoto(){
+    Random = Math.floor(Math.random() * 10) + 1;
+    //if(Math.floor(Math.random()*2)){
+
+    if(true){
+        var xhr = new XMLHttpRequest();
+        xhr.open('get', 'https://v1.hitokoto.cn/?c=k');
+        xhr.onreadystatechange = function () {
+            document.getElementById('hitokoto').innerText = JSON.parse(xhr.responseText).hitokoto;
+        }
+        xhr.send();
+
+        console.log("1");
+    }else{
+        console.log("0");
+    }
+
+
+}
+
+
+
 
 
 function RI(RI){
@@ -118,6 +140,8 @@ function SendComments_emoji(ID){
     document.getElementById('Comments-Send-Text-Get').value = document.getElementById('Comments-Send-Text-Get').value + "";
 
 
+
+    
 }
 
 

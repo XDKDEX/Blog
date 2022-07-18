@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=.95">
 <html lang="zh-cn">
 <head>
 <!-- name:DefintElis -->
@@ -25,7 +25,7 @@
         
     <!--Plug-in-END-->
 </head>
-<body id='WindowsPages'>
+<body onload='Gethitokoto()' id='WindowsPages'>
     <div class='background' id='background'></div>    
     <div class='header' id='header'>
         <div class='header-menu' id='header-menu'>
@@ -75,7 +75,11 @@
 
 
 
-    <div class='placeholder'></div>
+    <div class='placeholder' onclick='Gethitokoto()'>
+        <a>
+            <h2 id='hitokoto'>Loading...</h2>
+        </a>
+    </div>
 
 
 
@@ -132,6 +136,11 @@
         </footer>
     </div>
 
-</body>
+
+
+
+
     <script src='./js/Clock.js'></script>
+    <script>Gethitokoto()</script>
+</body>
 </html><!--https://xdkdex.github.io/Project-Ir 铱在350°C的熔融氢氧化钠中（未通入空气）极其耐腐蚀，腐蚀率小于0.005mm/年(约3.5mdd)，但400°C以上的熔融氢氧化钠对铱的腐蚀很严重；熔融的氢氧化钾也可以强烈腐蚀铱。-->
