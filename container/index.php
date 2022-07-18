@@ -60,6 +60,7 @@
 
     <div class='container'>
         <?php
+            
                     //echo $_SERVER['HTTP_USER_AGENT'];
                     $pageURL = $_SERVER["REQUEST_URI"];
                     $n = preg_replace('/[^0-9]/','',$pageURL);

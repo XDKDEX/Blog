@@ -88,6 +88,9 @@
         <div class='container'>
 
             <?php
+
+print_r(getrusage());
+
                 $n = 1;
                 while(file_exists('./container/'.$n.'.json')){
                     $n++;
