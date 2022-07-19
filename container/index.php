@@ -12,14 +12,13 @@
     <script src="../js/main.js"></script>
     <!--Plug-in-Start-->
     
-        <!--Aplayer-Start-->
+
+        <!--Aplayer-->
         <link rel="stylesheet" href="./../../Plug-in/APlayer/APlayer.min.css">
         <script src="./../../Plug-in/APlayer/APlayer.min.js"></script>
-            <!-- APlayer-MetingJS -->
-<!--                <script src="./../..//Plug-in/Meting/Meting.min.js"></script>
-                <meting-js server="netease" type="playlist" id="7366701902" fixed="true" order="random" autoplayer="true" lrctype="1"></meting-js>
-            <!-- APlayer-MetingJS -->
-        <!--Aplayer-End-->
+        <!-- APlayer-MetingJS -->
+        <script src="./../..//Plug-in/Meting/Meting.min.js"></script>
+        <meting-js server="netease" type="playlist" id="7366701902" fixed="true" order="random" autoplayer="true" lrctype="1"></meting-js>
         
     <!--Plug-in-END-->
 </head>
@@ -119,7 +118,7 @@
                 
                 <a onclick='SendComments()'>
                     <div class='Comments-Sendarea-Send'>
-                       <span>发表评论</span>
+                        <span>发表评论</span>
                     </div>
                 </a>
             </div> 
@@ -176,6 +175,5 @@
             </div>
         </footer>
     </div>
-    <script></script>
 </body>
 </html><!--  ( ゜- ゜)つロ_(:з」∠)_（⌒▽⌒）（￣▽￣）(=・ω・=)(*°▽°*)八(*°▽°*)♪✿ヽ(°▽°)ノ✿(¦3【▓▓】눈_눈(ಡωಡ)_(≧∇≦」∠)_━━━∑(ﾟ□ﾟ*川━(｀・ω・´)(￣3￣)✧(≖ ◡ ≖✿)(･∀･)(〜￣△￣)〜→_→(°∀°)ﾉ╮(￣▽￣)╭( ´_ゝ｀)←_←(;¬_¬)(ﾟДﾟ≡ﾟдﾟ)!?( ´･･)ﾉ(._.`)Σ(ﾟдﾟ;)Σ( ￣□￣||)<(´；ω；`)（/TДT)/(^・ω・^ )(｡･ω･｡)(●￣(ｴ)￣●)ε=ε=(ノ≧∇≦)ノ(´･_･`)(-_-#)（￣へ￣）(￣ε(#￣) Σ(╯°口°)╯(┴—┴ヽ(`Д´)ﾉ("▔□▔)/(º﹃º )(๑>؂<๑）｡ﾟ(ﾟ´Д｀)ﾟ｡(∂ω∂)(┯_┯)(・ω< )★( ๑ˊ•̥▵•)੭₎₎¥ㄟ(´･ᴗ･`)ノ¥Σ_(꒪ཀ꒪」∠)_٩(๛ ˘ ³˘)۶❤(๑‾᷅^‾᷅๑)  https://xdkdex.github.io/Project-Ir 铱在350°C的熔融氢氧化钠中（未通入空气）极其耐腐蚀，腐蚀率小于0.005mm/年(约3.5mdd)，但400°C以上的熔融氢氧化钠对铱的腐蚀很严重；熔融的氢氧化钾也可以强烈腐蚀铱。-->

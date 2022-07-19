@@ -15,15 +15,16 @@ h3{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    animation: 3s hitokotoIn;
-}@keyframes hitokotoIn{
-    0%{color: transparent;}
+    animation: 3s;
+}@keyframes hitokoto{  
+    0%{color: #ffffff;}
+    50%{color: transparent;}
     100%{color: #ffffff;}
+}@keyframes hitokotoI{  
+    0%{color: #ffffff;}
+    100%{color: transparent;}
 }
-@keyframes hitokotoOut{
-    0%{width: #ffffff;}
-    100%{width: transparent;}
-}
+
 
 
 

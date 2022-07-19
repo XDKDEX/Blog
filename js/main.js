@@ -10,19 +10,18 @@ function Gethitokoto(){
     //if(Math.floor(Math.random()*2)){
 
     if(true){
+        url = "https://v1.hitokoto.cn/?c=k";
         var xhr = new XMLHttpRequest();
-        xhr.open('get', 'https://v1.hitokoto.cn/?c=k');
-        xhr.onreadystatechange = function () {
-            document.getElementById('hitokoto').innerText = JSON.parse(xhr.responseText).hitokoto;
-        }
+        xhr.open('get', url);
         xhr.send();
-
+        xhr.onreadystatechange = function () {
+            var json = JSON.parse(xhr.responseText)
+            document.getElementById('hitokoto').innerText = json.hitokoto;
+        }
         console.log("1");
     }else{
         console.log("0");
     }
-
-
 }
 
 
@@ -35,8 +34,16 @@ function RI(RI){
 
 
 
-
-
+function DEMO(){
+var url = "/js/data.json"/*json文件url，本地的就写本地的位置，如果是服务器的就写服务器的路径*/
+var request = new XMLHttpRequest();
+request.open("get", url);/*设置请求方法与路径*/
+request.send(null);/*不发送数据到服务器*/
+request.onload = function () {/*XHR对象获取到返回信息后执行*/
+        var json = JSON.parse(request.responseText);
+        console.log(json.CPU_Use);
+    }
+}
 
 
 

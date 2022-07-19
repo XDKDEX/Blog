@@ -12,44 +12,28 @@
     <script src="./js/main.js"></script>
     
     <!--Plug-in-Start-->
-    
+
+
         <!--Aplayer-Start-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="./Plug-in/APlayer/APlayer.min.css">
         <script src="./Plug-in/APlayer/APlayer.min.js"></script>
             <!-- APlayer-MetingJS -->
                 <script src="./Plug-in/Meting/Meting.min.js"></script>
-                <meting-js  server="netease" type="playlist" id="7366701902" fixed="true" order="random" autoplayer="true" lrctype="1"></meting-js>
+                <meting-js server="netease" type="playlist" id="7366701902" fixed="true" order="random" autoplayer="true" lrctype="1"></meting-js>
             <!-- APlayer-MetingJS -->
         <!--Aplayer-End-->
         
     <!--Plug-in-END-->
 </head>
-<body onload='Gethitokoto()' id='WindowsPages'>
+<body id='WindowsPages'>
     <div class='background' id='background'></div>    
     <div class='header' id='header'>
-        <div class='header-menu' id='header-menu'>
-        
+        <div class='header-menu' id='header-menu'>            
             <ul class='header-menu-list'>
-                <a href='javascript:void(0);' onclick='list()'>
+                <a onclick='list()' href='javascript:void(0);'>
                     <li>
-                    <i class="fa fa-list"></i>
-                    </li>
-                </a>
-            </ul>
-            
-            <ul class='header-menu-home'>
-                <a href='javascript:void(0);'>
-                    <li>
-                        <i class="fa fa-home"></i>首页
-                    </li>
-                </a>
-            </ul>
-            
-            <ul class='header-menu-search'>
-                <a onclick='W()' href='javascript:void(0);'>
-                    <li>
-                        <i class="fa fa-search"></i>
+                        <i class="fa fa-list"></i>
                     </li>
                 </a>
             </ul>
@@ -77,7 +61,7 @@
 
     <div class='placeholder' onclick='Gethitokoto()'>
         <a>
-            <h2 id='hitokoto'>Loading...</h2>
+            <h2 id='hitokoto' style="animation-name: hitokoto;">Loading...</h2>
         </a>
     </div>
 
@@ -89,7 +73,6 @@
 
             <?php
 
-print_r(getrusage());
 
                 $n = 1;
                 while(file_exists('./container/'.$n.'.json')){
