@@ -166,8 +166,8 @@ i{
 .header-menu-list{
     color: white;
     display: flex;
-    margin-left: auto;
     margin-top: auto;
+    padding-left: 0;
     margin-bottom: auto;
     font-size: xx-large;
 }
