@@ -8,6 +8,8 @@
 function Gethitokoto(){
     Random = Math.floor(Math.random() * 10) + 1;
     //if(Math.floor(Math.random()*2)){
+    
+    
 
     if(true){
         url = "https://v1.hitokoto.cn/?c=k";
@@ -142,15 +144,21 @@ function SendComments(){
     //var Text = $('#Comments-Send-Text').val();
 }
 function SendComments_emoji(ID){
-    
-    
     document.getElementById('Comments-Send-Text-Get').value = document.getElementById('Comments-Send-Text-Get').value + "";
-
-
-
-    
 }
+function Reply(subkey,ID){
+    if(subkey!==false){
+        var httpRequest = new XMLHttpRequest();//第一步：创建需要的对象
+        httpRequest.open('POST', '../container/action.php', true); //第二步：打开连接
+        httpRequest.setRequestHeader("Content-type","application/json");//设置请求头 注：post方式必须设置请求头（在建立连接后设置请求头）
+        httpRequest.send("Live "+S);//发送请求 将情头体写在send中
+    }else{
 
+
+        
+    }
+    console.log(subkey,ID);
+}
 
 
 
