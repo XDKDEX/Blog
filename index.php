@@ -85,6 +85,7 @@
                     $json_source = file_get_contents('./container/'.$n.'.json');
                     $json = json_decode($json_source, true);
 
+                        
 
                     echo "<section class='container-main' id='container-main'>
                             <article class='container-main-article'>
@@ -92,17 +93,17 @@
                                     <a onclick=Read(".$n.") href='/container/index.php?r=".$n."'>
                                         <img class='container-main-article-row-img' src='./img/Blog.jpg'>
                                         <h2>".$json['Title']."</h2>
-                                    </a>
+                                    </a>                        
                                         <p>".$json['Simple']."...</p>
                                     <div class='container-main-article-row-detailed'>
                                         <a class='container-main-article-row-detailed-time' id='time'><i class='fa fa-calendar'></i>1145-14-19</a>
                                         <a class='container-main-article-row-detailed-Read'><i class='fa fa-eye'></i>".$json['Read']."次阅读</a>
                                         <a onclick=Live(".$n.") class='container-main-article-row-detailed-live'><i class='fa fa-thumbs-o-up'></i>".$json['Live']."人点赞</a>
                                         <!-- <a class='container-main-article-row-detailed-live-act' href='javascript:void(1);' onclick='Live()'><i class='fa fa-thumbs-o-up' id='live'></i></a> --!>
-                                    </div>
-                                </div>
-                            </article>
-                            </section>
+                                    </div>              
+                                </div>                                          
+                            </article>                      
+                            </section>                      
                         ";
                     $n--;
                     }else{
