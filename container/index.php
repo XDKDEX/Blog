@@ -140,21 +140,46 @@
                     while(isset($json['Comments']['ID'][''.$C.''])){
 
                         echo "  <section>
-                                    <ul>
-                                        <div class='Comments-header'>    
-                                            <img src='../img/Blog.jpg'>
-                                            <div class='Comments-header-detailed'>
-                                                <cite class='Name'>".$json['Comments']['ID'][''.$C.'']['Name']."</cite>
-                                                <cite class='Time'>".$json['Comments']['ID'][''.$C.'']['Time']."</cite>
+                                    <div>
+                                        <ul> 
+                                            <div class='Comments-header'>    
+                                                <img src='../img/Blog.jpg'>
+                                                <div class='Comments-header-detailed'>
+                                                    <cite class='Name'>".$json['Comments']['ID'][''.$C.'']['Name']."</cite>
+                                                    <cite class='Time'>".$json['Comments']['ID'][''.$C.'']['Time']."</cite>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class='Text'>
-                                            ".$json['Comments']['ID'][''.$C.'']['Text']."
-                                            <div class='Reply'>
-                                                <a>回复</a>
+                                            <div class='Text'>
+                                                ".$json['Comments']['ID'][''.$C.'']['Text']."
                                             </div>
-                                        </div>
-                                    </ul>
+                                            <div class='Reply' id='Reply'>
+                                                <a class='ReplyArea' onclick='ReplyArea()'>回复</a>
+                                            </div>
+                                        
+
+
+
+
+                                            
+                                            <div class='Reply-Area'>
+                                                <ul>
+                                                    <div class='Comments-header'>    
+                                                        <img src='../img/Blog.jpg'>
+                                                        <div class='Comments-header-detailed'>
+                                                            <cite class='Name'>".$json['Comments']['ID'][''.$C.'']['Name']."</cite>
+                                                            <cite class='Time'>".$json['Comments']['ID'][''.$C.'']['Time']."</cite>
+                                                        </div>
+                                                    </div>
+                                                    <div class='Text'>
+                                                        ".$json['Comments']['ID'][''.$C.'']['Text']."
+                                                    </div>
+                                                    <div class='Reply'>
+                                                        <a>回复</a>
+                                                    </div>
+                                                </ul>
+                                            </div>
+                                        </ul>
+                                    </div>
                                 </section>
                         ";
                     $C--;   

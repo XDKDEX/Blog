@@ -146,18 +146,36 @@ function SendComments(){
 function SendComments_emoji(ID){
     document.getElementById('Comments-Send-Text-Get').value = document.getElementById('Comments-Send-Text-Get').value + "";
 }
+
+
+function ReplyArea(){
+    document.getElementById("Reply").innerHTML = "<div class='Comments'><span>回复</span><a class='ReplyCannel' onclick='ReplyCannel()'>取消</a><br><br><h8>必填项已用 * 标注</h8><div class='Comments-Sendarea'><textarea id='Reply-Comments-Send-Text-Get' class='Comments-Sendarea-Text' placeholder=''></textarea><div class='Comments-Sendarea-emoji'><a>表情(开发中)</a></div></div><div class='Comments-Sendarea-User'><div class='Comments-Sendarea-User-Icon'><i class='fa fa-user'></i></div><div class='Comments-Sendarea-User-Text'><textarea id='Reply-Comments-Send-User-Get' class='Comments-Sendarea-User-Text' placeholder='昵称(不填则)'></textarea></div><span class='need'>*</span></div><div class='Comments-Sendarea-Email'><div class='Comments-Sendarea-Email-Icon'><i class='fa fa-envelope'></i></div><div class='Comments-Sendarea-Email-Text'><textarea disabled='' id='Comments-Sendarea-Email-Get' class='Comments-Sendarea-Email-Text' placeholder='开发中'></textarea></div><span class='need'>*</span></div><a onclick='SendComments()'><div class='Comments-Sendarea-Send'><span>发表评论</span></div></a></div></div>";
+
+}
+function ReplyCannel(){
+    document.getElementById("Reply").innerHTML = "<a class='ReplyArea' onclick='ReplyArea()'>回复</a>";
+}
+
+
+
+
 function Reply(subkey,ID){
-    if(subkey!==false){
-        var httpRequest = new XMLHttpRequest();//第一步：创建需要的对象
-        httpRequest.open('POST', '../container/action.php', true); //第二步：打开连接
-        httpRequest.setRequestHeader("Content-type","application/json");//设置请求头 注：post方式必须设置请求头（在建立连接后设置请求头）
-        httpRequest.send("Live "+S);//发送请求 将情头体写在send中
+    if(document.getElementById('Reply-Comments-Send-Text-Get').value === ''){
+        alert("请输入内容!");
     }else{
 
-
+        if(subkey!==false){
+            Text = document.getElementById('Reply-Comments-Send-Text-Get').value;
+        }else{
+            var httpRequest = new XMLHttpRequest();//第一步：创建需要的对象
+            httpRequest.open('POST', '../container/action.php', true); //第二步：打开连接
+            httpRequest.setRequestHeader("Content-type","application/json");//设置请求头 注：post方式必须设置请求头（在建立连接后设置请求头）
+            httpRequest.send("Reply "+ID);//发送请求 将情头体写在send中
         
+        }
+        console.log(subkey,ID);
+    console.log(subkey,ID,Text);
     }
-    console.log(subkey,ID);
 }
 
 

@@ -2,7 +2,8 @@ h3{
     text-shadow: 2px 2px 5px #f3f3f3;
 }
 .placeholder{
-    padding:  3em 1em 1em 1em;
+    background-image: url(../img/background/back.jpg);
+    padding: 3em 1em 2em 1em;
     color: #ffffff;
     text-align: center;
     align-items: center;

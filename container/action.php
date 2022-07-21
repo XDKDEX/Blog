@@ -1,5 +1,6 @@
 <?php
 $data = file_get_contents('php://input');
+//ACT
 if(preg_match('/\b[Live]+\b/', $data)){
     $data = substr($data, 5, 5);
     $json_source = file_get_contents('./'.$data.'.json');
@@ -15,4 +16,18 @@ if(preg_match('/\b[Live]+\b/', $data)){
     $json = json_encode($json);
     file_put_contents("".$data.".json",$json);
 }
+//Reply
+if(preg_match('/\b[Reply]+\b/', $data)){
+
+
+
+
+}else if(preg_match('/\b[Reply]+\b/', $data)){
+
+
+
+}
+
+
+
 ?>
